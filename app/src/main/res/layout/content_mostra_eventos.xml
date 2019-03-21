@@ -8,4 +8,14 @@
     tools:context=".MostraEventosActivity"
     tools:showIn="@layout/activity_mostra_eventos">
 
+    <TextView
+        android:id="@+id/textViewResumoEventos"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Nesta atividade vão ser mostrados os eventos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

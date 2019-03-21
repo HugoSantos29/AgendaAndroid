@@ -12,8 +12,13 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button buttonEventos;
+    private Button buttonCalendario;
+    private Button buttonConvidados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,18 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+
+        buttonEventos = (Button) findViewById(R.id.buttonEventos);
+        buttonEventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMostraEventosActivity();
+            }
+        });
+
+    }
+
+    private void openMostraEventosActivity() {
     }
 
 
