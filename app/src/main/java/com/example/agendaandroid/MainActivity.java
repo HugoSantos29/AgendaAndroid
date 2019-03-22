@@ -17,23 +17,13 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonEventos;
-    private Button buttonCalendario;
-    private Button buttonConvidados;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-    }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
 
         buttonEventos = (Button) findViewById(R.id.buttonEventos);
         buttonEventos.setOnClickListener(new View.OnClickListener() {
@@ -42,10 +32,14 @@ public class MainActivity extends AppCompatActivity {
                 openMostraEventosActivity();
             }
         });
-
     }
 
-    private void openMostraEventosActivity() {
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
 
@@ -64,12 +58,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void mostraconvidados(View view) {
+    public void openMostraEventosActivity() {
+        Intent intent = new Intent(this, MostraEventosActivity.class);
+        startActivity(intent);
     }
 
-    public void mostracalendario(View view) {
-    }
 
-    public void mostraeventos(View view) {
-    }
 }
